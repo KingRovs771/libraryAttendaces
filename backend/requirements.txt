@@ -1,0 +1,8 @@
+flask
+mysql-connector-python
+opencv-python
+face-recognition
+tensorflow
+numpy
+pillow
+scikit-learn
