@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend
+    working_dir: /app/backend
+    command: python app.py # Ubah ini sesuai entrypoint backend-mu
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    working_dir: /app/frontend
+    command: npm start # Ubah jika bukan pakai React
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend

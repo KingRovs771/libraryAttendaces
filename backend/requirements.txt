@@ -6,3 +6,8 @@ tensorflow
 numpy
 pillow
 scikit-learn
+Image
+mysql.connector
+cv2
+glob
+face_recognition
